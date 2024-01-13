@@ -1,9 +1,6 @@
 import SpreadSheetRepository from "../repositories/SpreadSheetRepository.js";
-import {
-  agruparDadosPorNomeDaColunaData,
-  filtraPorNomeDaColuna,
-  metricas,
-} from "../utils/Utils.js";
+import { metricas } from "../services/MetricasServices.js";
+import { agruparDadosPorNomeDaColunaData } from "../utils/UtilsFiles.js";
 
 class SpreadSheet {
   todos(req, res) {
@@ -65,9 +62,6 @@ class SpreadSheet {
     try {
       const response = SpreadSheetRepository.buscaDadosDoArquivo();
       const retorno = metricas(response, nomeDaColunaData);
-
-      // console.log(retorno);
-
       res.status(200).send({
         message: "",
         data: retorno,

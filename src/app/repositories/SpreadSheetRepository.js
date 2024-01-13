@@ -17,8 +17,7 @@ class SpreadSheetRepository {
         defval: "",
         blankrows: true,
         raw: false,
-        dateNF: 'yyyy"/"mm"/"dd', //T"hh":"mm":"ss.00-0300"',
-        // dateNF: 'yyyy"-"mm"-"dd"T00:00:00"', //T"hh":"mm":"ss.00-0300"',
+        dateNF: 'yyyy"/"mm"/"dd',
       };
 
       const response = xlsx.utils
